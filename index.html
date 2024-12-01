@@ -6,137 +6,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hernandez Concrete</title>
     <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
         /* Top Bar Styling */
-        /* Top Bar Styling */
-.top-bar {
-    background-color: #000;
-    color: #FFF;
-    font-style: italic;
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-}
+        .top-bar {
+            background-color: #000;
+            color: #FFF;
+            font-style: italic;
+            font-size: 0.75rem;
+            padding: 0.5rem 1rem;
+            text-align: center;
+        }
 
-.top-bar-content {
-    max-width: 1000px;
-    margin: auto;
-}
+        /* Hero Section Styling */
+        .hero {
+            text-align: center;
+            background-image: url('concrete_img1.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 5rem 2rem;
+            color: #FFF;
+        }
 
-/* Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+        .hero-content {
+            max-width: 90%;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 10px;
+        }
 
-/* Hero Section Styling */
-.hero {
-    text-align: center;
-    background-image: url('concrete_img1.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 5rem 2rem;
-    color: #FFF;
-}
+        .cta-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #FFF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
 
-.hero-content {
-    max-width: 70%;
-    max-height: 20%;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.7rem;
-    border-radius: 10px;
-    text-align: center;
-}
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
 
-.cta-button {
-    display: inline-block;
-    background-color: #007BFF;
-    color: #FFF;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-}
+        /* Features Section */
+        .features {
+            padding: 2rem;
+            text-align: center;
+        }
 
-.cta-button:hover {
-    background-color: #0056b3;
-}
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: #FFF;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .service-card img {
+            border-radius: 20px;
+        }
+
+    /* Contact Section Styling */
+    .contact {
+        background-color: #f9f9f9;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #FFF;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .contact-photo img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-info {
+        flex: 1;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+        color: #007BFF;
+        margin-bottom: 1rem;
+    }
+
+    .contact-info ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-info li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-info li i {
+        font-size: 1.2rem;
+        color: #007BFF;
+        margin-right: 0.5rem;
+    }
+
+    .contact-info a {
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+</style>
 
 
-/* Contact Section Styling */
-.contact-container {
-    display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    gap: 2rem; /* Increase spacing between photo and text */
-    padding: 2rem; /* Add consistent padding around the section */
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 10px; /* Rounded corners for the entire section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    margin: 2rem auto;
-    max-width: 1000px; /* Limit section width for better readability */
-}
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .hero-content {
+                max-width: 70%;
+            }
 
-.contact-photo img {
-    width: 100%; /* Ensure photo scales responsively */
-    max-width: 300px; /* Limit maximum size */
-    height: auto;
-    border-radius: 10px; /* Smooth rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
-}
+            .contact-container {
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 2rem;
+            }
 
-.contact-info {
-    flex: 1; /* Allow the text to fill remaining space */
-    text-align: left;
-    font-size: 1rem; /* Standardize font size */
-    line-height: 1.5; /* Improve readability */
-    color: #333; /* Dark gray for better readability */
-}
+            .contact-photo img {
+                max-width: 300px;
+            }
 
-.contact-info h2 {
-    font-size: 1.5rem; /* Add a heading for the contact section */
-    color: #007BFF; /* Match the CTA button color */
-    margin-bottom: 1rem;
-}
-
-.contact-info ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    margin-bottom: 1rem; /* Add more spacing between items */
-    display: flex;
-    align-items: center; /* Align icons and text */
-}
-
-.contact-info li i {
-    font-size: 1.2rem; /* Ensure icons are prominent */
-    color: #007BFF;
-    margin-right: 0.5rem; /* Space between icon and text */
-}
-
-.contact-info a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: 500; /* Slightly bold for emphasis */
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-.contact-info a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-
+            .services-container {
+                justify-content: space-between;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="top-bar">
-        <div class="top-bar-content">
+        <div>
             <h1>Dirty Hands Clean Work</h1>
         </div>
     </header>
@@ -152,24 +210,24 @@ body {
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service-card">
-                <img src="concrete-icon.jpg" alt="Concrete Work">
+                <img src="concrete_img3.jpg" alt="Concrete Work">
                 <h3>Concrete Work</h3>
                 <p>From new concrete installations to tear outs and add-ons, we handle all your concrete needs.</p>
             </div>
             <div class="service-card">
-                <img src="shed-icon.jpg" alt="She-Shed Renovations">
+                <img src="concrete_img4.jpg" alt="She-Shed Renovations">
                 <h3>She-Shed Renovations</h3>
                 <p>Transform your space into a stunning retreat with our expert renovations.</p>
             </div>
             <div class="service-card">
-                <img src="addon-icon.jpg" alt="Home Add-Ons">
-                <h3>Home Add-Ons</h3>
-                <p>Expand your living space with high-quality additions tailored to your needs.</p>
-            </div>
-            <div class="service-card">
-                <img src="cabinet-icon.jpg" alt="Cabinet Installations">
+                <img src="concrete_img5.jpg" alt="Cabinet Installations">
                 <h3>Cabinet Installations and Tear-Outs</h3>
                 <p>Modernize your kitchen or storage spaces with professional cabinet services.</p>
+            </div>
+            <div class="service-card">
+                <img src="concrete_img6.jpg" alt="Flooring">
+                <h3>Flooring</h3>
+                <p>Installation of high-quality vinyl and laminate provides a seamless and durable finish</p>
             </div>
             <div class="service-card">
                 <img src="electrical-icon.jpg" alt="Electrical Work">
@@ -183,22 +241,32 @@ body {
             </div>
         </div>
     </section>
-    
 
     <section class="contact">
         <h2>Contact Us</h2>
-        <div class="contact-methods">
-            <section class="contact-container">
-                <div class="contact-photo">
+        <div class="contact-container">
+            <div class="contact-photo">
                 <img src="concrete_img2.jpg" alt="Concrete Worker">
-                </div>
-                <div class="contact-info">
-          <a href="tel:5551234567">Call Us: (555) 123-4567</a>
-          <a href="mailto:info@hernandezconcrete.com">Email Us: info@hernandezconcrete.com</a>
+            </div>
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <ul>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:5551234567">Call Us: (555) 123-4567</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@hernandezconcrete.com">Email Us: info@hernandezconcrete.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Treasure Valley, ID
+                    </li>
+                </ul>
+            </div>
         </div>
-      </section>
-      
     </section>
-
+    
 </body>
 </html>
