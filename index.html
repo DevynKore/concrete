@@ -7,112 +7,131 @@
     <title>Hernandez Concrete</title>
     <style>
         /* Top Bar Styling */
-        .top-bar {
-            background-color: #000;
-            color: #FFF;
-            font-style: italic;
-            font-size: 0.75rem;
-            padding: 0.5rem 1rem;
-        }
+        /* Top Bar Styling */
+.top-bar {
+    background-color: #000;
+    color: #FFF;
+    font-style: italic;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+}
 
-        .top-bar-content {
-            max-width: 1000px;
-            margin: auto;
-        }
+.top-bar-content {
+    max-width: 1000px;
+    margin: auto;
+}
 
-        /* Body Styling */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Hero Section Styling */
-        .hero {
-            text-align: center;
-            background-image: url('concrete_img1.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 5rem 2rem;
-            color: #FFF;
-        }
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    background-image: url('concrete_img1.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem 2rem;
+    color: #FFF;
+}
 
-        .hero-content {
-            max-width: 70%;
-            max-height: 20%;
-            margin: auto;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: .7rem;
-            border-radius: 10px;
-            text-align: center;
-        }
+.hero-content {
+    max-width: 70%;
+    max-height: 20%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.7rem;
+    border-radius: 10px;
+    text-align: center;
+}
 
-        .cta-button {
-            display: inline-block;
-            background-color: #007BFF;
-            color: #FFF;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-        }
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #FFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
 
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
+.cta-button:hover {
+    background-color: #0056b3;
+}
 
-        /* Contact Section Styling */
-        .contact-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 1rem;
-            padding: 1rem;
-            flex-wrap: nowrap; /* Ensure items don't wrap unless necessary */
-        }
 
-        .contact-photo {
-            flex-shrink: 0; /* Prevent the image from shrinking */
-        }
+/* Contact Section Styling */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 2rem; /* Increase spacing between photo and text */
+    padding: 2rem; /* Add consistent padding around the section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for the entire section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin: 2rem auto;
+    max-width: 1000px; /* Limit section width for better readability */
+}
 
-        .contact-photo img {
-            width: 150px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+.contact-photo img {
+    width: 100%; /* Ensure photo scales responsively */
+    max-width: 300px; /* Limit maximum size */
+    height: auto;
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+}
 
-        .contact-info {
-            flex-grow: 1;
-            text-align: left;
-        }
+.contact-info {
+    flex: 1; /* Allow the text to fill remaining space */
+    text-align: left;
+    font-size: 1rem; /* Standardize font size */
+    line-height: 1.5; /* Improve readability */
+    color: #333; /* Dark gray for better readability */
+}
 
-        .contact-info h2 {
-            margin-bottom: 1rem;
-        }
+.contact-info h2 {
+    font-size: 1.5rem; /* Add a heading for the contact section */
+    color: #007BFF; /* Match the CTA button color */
+    margin-bottom: 1rem;
+}
 
-        .contact-info ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.contact-info ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
 
-        .contact-info li {
-            margin-bottom: 0.5rem;
-        }
+.contact-info li {
+    margin-bottom: 1rem; /* Add more spacing between items */
+    display: flex;
+    align-items: center; /* Align icons and text */
+}
 
-        .contact-info a {
-            text-decoration: none;
-            color: #007BFF;
-        }
+.contact-info li i {
+    font-size: 1.2rem; /* Ensure icons are prominent */
+    color: #007BFF;
+    margin-right: 0.5rem; /* Space between icon and text */
+}
 
-        .contact-info a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
+.contact-info a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500; /* Slightly bold for emphasis */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
     </style>
 </head>
 <body>
@@ -167,29 +186,18 @@
     
 
     <section class="contact">
-        <h2>Contacts</h2>
-        <div class="contact-container">
-            <div class="contact-item">
-                <div class="icon">
-                    <img src="phone-icon.png" alt="Phone Icon">
+        <h2>Contact Us</h2>
+        <div class="contact-methods">
+            <section class="contact-container">
+                <div class="contact-photo">
+                <img src="concrete_img2.jpg" alt="Concrete Worker">
                 </div>
-                <div class="contact-details">
-                    <h3>Tel</h3>
-                    <a href="tel:5551234567">Call Us: (555) 123-4567</a>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="icon">
-                    <img src="email-icon.png" alt="Email Icon">
-                </div>
-                <div class="contact-details">
-                    <h3>Email</h3>
-                    <a href="mailto:info@hernandezconcrete.com">Email Us: info@hernandezconcrete.com</a>
-                </div>
-            </div>
+                <div class="contact-info">
+          <a href="tel:5551234567">Call Us: (555) 123-4567</a>
+          <a href="mailto:info@hernandezconcrete.com">Email Us: info@hernandezconcrete.com</a>
         </div>
-    </section>
-    
+      </section>
+      
     </section>
 
 </body>
