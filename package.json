@@ -2,7 +2,7 @@
   "name": "concrete-web",
   "version": "1.0.0",
   "description": "A simple web app",
-  "main": "main.js", 
+  "main": "main.js",
   "scripts": {
     "start": "lite-server"
   },
@@ -10,6 +10,8 @@
     "lite-server": "^2.6.1"
   },
   "author": "DevKore",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concrete-web": "file:"
+  }
 }
-

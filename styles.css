@@ -44,19 +44,31 @@ a {
     border-radius: 10px;
 }
 
-.cta-button {
+.move-button {
     display: inline-block;
     background-color: #007BFF;
     color: #FFF;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem .75rem;
     border-radius: 4px;
     font-weight: bold;
     margin-top: 1rem;
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
+.move-button:hover {
+    background-color: #5a6268; /* Slightly darker hover color */
+}
+
+
+.cta-button{
+    display: inline-block;
+    background-color: #007BFF;
+    color: #FFF;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 /* Features Section */
@@ -86,8 +98,6 @@ a {
     box-sizing: border-box; /* Ensure proper sizing */
 }
 
-
-
 .service-card img {
     border-radius: 20px;
     height: 200px;
@@ -104,7 +114,7 @@ a {
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     padding: 2rem;
     background-color: #FFF;
     border-radius: 10px;
@@ -130,40 +140,97 @@ a {
 }
 
 .contact-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #070707;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    margin-bottom: 1rem;
+/* Form Styling */
+form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.contact-info li i {
-    font-size: 1.2rem;
-    color: #007BFF;
-    margin-right: 0.5rem;
+form label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
 }
 
-.contact-info a {
-    text-decoration: none;
-    color: #007BFF;
+/* Smaller Input Fields */
+form input {
+    width: fit-content; /* Shrinks to content size initially */
+    min-width: 200px; /* Ensures it doesn't get too small */
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    /* Remove the width expansion on focus */
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Larger Work Description Field */
+form textarea {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 100px; /* Larger height */
+    max-height: 300px; /* Limits excessive growth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+.cta-button {
+    display: inline-block;
+    width: fit-content;
+    align-self: flex-start;
+    background-color: #007BFF;
+    color: #FFF;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 0.5rem; /* Reduced space under the Send Message button */
+    margin-bottom: 0.5rem; /* Reduced space above the Send Message button */
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Response Message */
+#formResponse {
+    font-size: 1rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    margin-top: 0.5rem; /* Reduced space under the Send Message button */
+    margin-bottom: 0.5rem; /* Reduced space above the Send Message button */
+    color: #333;
 }
 
-.contact-info a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
 
 .carousel {
     position: relative;
@@ -183,10 +250,10 @@ a {
 }
 
 .carousel-images img {
-    height: 100%;
-    width: auto;
-    border-radius: 20px;
+    height: 200px; /* Set consistent height with other images */
+    width: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .carousel-button {
@@ -263,42 +330,80 @@ a {
     .contact-photo img {
         max-width: 300px;
     }
-} /* Close the media query properly */
-
+}
 
 @media (max-width: 600px) {
+    body {
+        font-size: 1rem; /* Adjust font size for readability */
+        margin: 0;
+        padding: 0; /* Ensure no padding or margin around the body */
+        width: 100%; /* Ensure full width */
+    }
+
     .services-container {
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping */
-        justify-content: space-around; /* Space cards evenly */
-        gap: .5rem; /* Add spacing between cards */
-        padding: .5rem; /* Add some padding to the container */
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem;
+        padding: 0; /* Remove padding from the container */
+        margin: 0; /* Remove margins from the container */
+        width: 100%; /* Full width of the viewport */
+        box-sizing: border-box; /* Include padding/borders in width */
     }
 
     .service-card {
-        flex: 0 0 calc(48% - 0.5rem); /* Slightly smaller than 50% to allow for spacing */
-        margin-bottom: 1rem; /* Add space below each card */
-        padding: 0.5rem; /* Reduce padding for better proportions */
-        box-sizing: border-box; /* Include padding and border in width/height */
-        text-align: center;
+        flex: 0 0 100%; /* Make cards span the full width */
+        margin: 0; /* Remove margins between cards */
+        padding: 1rem; /* Maintain card padding for content readability */
+        box-sizing: border-box;
     }
 
     .service-card img {
-        height: auto; /* Keep aspect ratio */
-        width: 100%; /* Ensure it fits within the card */
-        height: 150px;
-        border-radius: 10px;
+        width: 90%; /* Ensure images stretch to fit the card width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 180px; /* Limit height for better scaling */
+        border-radius: 8px; /* Consistent design */
     }
 
-    .service-card h3 {
-        font-size: 1rem; /* Scale down heading text */
-        margin: 0.5rem 0;
+    .hero {
+        padding: 4rem 1rem; /* Adjust padding for smaller screens */
+        margin: 0; /* Remove any hero margin */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 
-    .service-card p {
-        font-size: 0.875rem; /* Scale down paragraph text */
-        line-height: 1.4; /* Improve text spacing */
+    .hero-content {
+        margin: 0;
+        width: 100%;
+        padding: 1rem; /* Adjust padding for compact layout */
+    }
+
+    .contact-container {
+        margin: 0;
+        padding: 1rem; /* Adjust padding for smaller screens */
+        width: 100%; /* Full width of the viewport */
+        box-sizing: border-box;
+    }
+
+    .carousel {
+        flex: 0 0 100%; /* Make cards span the full width */
+        margin: 0; /* Remove margins between cards */
+        padding: 1rem; /* Maintain card padding for content readability */
+        box-sizing: border-box;
+    }
+
+    .carousel-images {
+        height: auto;
+        width:auto;
+    }
+
+    .contact-photo {
+        display: flex;
+        justify-content: center; /* Centers the image horizontally */
+        align-items: center; /* Centers the image vertically */
+        width: 100%; /* Ensures the container spans the full width of its parent */
+    }
+    
+    .contact-photo img {
+        max-width: 200px; /* Sets a maximum width for the image */
+        height: auto; /* Maintains the aspect ratio */
     }
 }
-
-

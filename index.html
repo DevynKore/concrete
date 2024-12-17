@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dirt Hands Clean Work</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header class="top-bar">
@@ -17,7 +23,8 @@
     <section class="hero">
         <div class="hero-content">
             <p>Treasure Valley Concrete and Handy Man services.</p>
-            <a href="/contact" class="cta-button">Get a Quote</a>
+            <!-- Updated link to scroll to contact section -->
+            <a href="#contact" class="move-button">Get a Quote</a>
         </div>
     </section>
 
@@ -33,7 +40,7 @@
                 <div class="carousel">
                     <button class="carousel-button left">&lt;</button>
                     <div class="carousel-images">
-                        <img src="shed_img1.jpg" alt="shed 1">
+                        <img src="img/shed_img1.jpg" alt="shed 1">
                         <img src="shed_img2.jpg" alt="shed 2">
                         <img src="shed_img3.jpg" alt="shed 3">
                     </div>
@@ -81,53 +88,42 @@
             <p>Dirty Hands Clean Work is a family-owned business with over 11 years of experience, led by John, the owner and operator. Based in Boise, we specialize in residential renovation projects, delivering quality craftsmanship and personalized service rooted in strong family values.</p>
         </div>
     </section>
-    
 
-    <section class="contact">
+    <!-- Added 'id="contact"' to the contact section -->
+    <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <div class="contact-container">
             <div class="contact-photo">
                 <img src="concrete_img2.jpg" alt="Concrete Worker">
             </div>
             <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <ul>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:5551234567">Call Us: (555) 123-4567</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@hernandezconcrete.com">Email Us: info@hernandezconcrete.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        Treasure Valley, ID
-                    </li>
-                </ul>
+                <form id="contactForm" action="https://formspree.io/f/xeoqbkjy" method="POST">
+                    <!-- Name Input -->
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+                    <!-- Email Input -->
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+    
+                    <!-- Phone Input (Optional) -->
+                    <label for="phone">Phone (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+    
+                    <!-- Work Description -->
+                    <label for="description">Work Description <span>*</span></label>
+                    <textarea id="description" name="description" rows="5" placeholder="Describe your project..." required></textarea>
+    
+                    <!-- Submit Button -->
+                    <button type="submit" class="cta-button">Send Message</button>
+    
+                    <!-- Response Message Placeholder -->
+                    <p id="formResponse" style="margin-top: 1rem;"></p>
+                </form>
             </div>
         </div>
     </section>
-    <script>
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            const imagesContainer = carousel.querySelector('.carousel-images');
-            const leftButton = carousel.querySelector('.carousel-button.left');
-            const rightButton = carousel.querySelector('.carousel-button.right');
-            
-            let scrollPosition = 0;
-            const scrollAmount = 300;
 
-            leftButton.addEventListener('click', () => {
-                scrollPosition = Math.min(scrollPosition + scrollAmount, 0);
-                imagesContainer.style.transform = `translateX(${scrollPosition}px)`;
-            });
-
-            rightButton.addEventListener('click', () => {
-                const maxScroll = -imagesContainer.scrollWidth + imagesContainer.clientWidth;
-                scrollPosition = Math.max(scrollPosition - scrollAmount, maxScroll);
-                imagesContainer.style.transform = `translateX(${scrollPosition}px)`;
-            });
-        });
-    </script>
+    <script src="src/main.js"></script>
 </body>
 </html>
